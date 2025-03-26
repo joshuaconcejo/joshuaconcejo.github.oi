@@ -1,0 +1,84 @@
+/* Global reset */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body and container styles */
+  body {
+    min-height: 100vh;
+    background-color: #f709c3; /* Light yellow background */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 500px;
+    height: 200px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* SVG container */
+  .svg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Styling for the lines */
+  .line {
+    fill: none;
+    stroke: #FFFFFF; /* White line color */
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+  
+  /* Letter styles */
+  .lttr {
+    fill: #763C8C; /* Purple color for letters */
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+  
+  /* Hover effect for letters */
+  .lttr:hover {
+    transform: scale(1.2); /* Slightly enlarge the letter on hover */
+    fill: #FF4500; /* Change color on hover */
+  }
+  
+  /* Clicked effect for letters (after interaction) */
+  .lttr:active {
+    fill: #00BFFF; /* Blue color on click */
+  }
+  
+  /* Additional styles for the lines */
+  .line--left {
+    stroke: #FFFFFF;
+  }
+  
+  .line--right {
+    stroke: #FFFFFF;
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media (max-width: 520px) {
+    body {
+      font-size: 50%; /* Adjust font size on small screens */
+    }
+  
+    .container {
+      width: 95%; /* Adjust container width on small screens */
+    }
+  }
+  
